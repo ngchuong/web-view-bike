@@ -5,16 +5,31 @@ import ListItem from "./component/list-item";
 import WomenBike from "./data/woman-bike.json";
 import MenBike from "./data/men-bike.json";
 
-const MergeData = [...WomenBike.data, ...MenBike.data];
+const MergeData = [...MenBike.data, ...WomenBike.data];
 
-console.log("%chome.js line:11 MergeData", "color: #007acc;", MergeData);
-const Container = styled("div")``;
+const Container = styled("div")`
+  /* background-color: #f3f3f3; */
+  width: 100%;
+`;
+
+// const Cont = styled("div")`
+//   /* width: 100%; */
+//   background-color: #fff;
+//   padding: 10px;
+// `;
+
+const TitleList = styled("div")`
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;
 
 const HomePage = () => {
   return (
-    <div style={{ width: "100%" }}>
-      <ListItem data={MergeData} />
-    </div>
+    <Container>
+        <TitleList>Danh sách xe</TitleList>
+        <ListItem data={MergeData} />
+    </Container>
   );
 };
 
