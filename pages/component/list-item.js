@@ -9,19 +9,25 @@ const Cont = styled("div")`
   width: 100%;
   display: flex;
   flex-flow: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+
 `;
 
 const WrapItem = styled("div")`
   /* width: 100%; */
   border-radius: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin: 4px 2px;
+  margin: 8px 2px;
 
-  width: 32%;
+  width: 300px;
   height: auto;
 
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.08);
+    z-index: 99999;
+  }
 `;
 
 const ImgCont = styled("div")`
@@ -30,7 +36,8 @@ const ImgCont = styled("div")`
   align-items: center;
 
   img {
-    width: 180px;
+    /* width: 200px; */
+    width: 100%;
     max-width: 100%;
     height: 200px;
   }
